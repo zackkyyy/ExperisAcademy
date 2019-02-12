@@ -10,10 +10,10 @@ example:
 
 $ java program 5
 
-#####
-#___#
-#___#
-#___#
-#####
+\#\#\#\#\#
+\#\_\_\_\#
+\#\_\_\_\#
+\#\_\_\_\#
+\#\#\#\#\#
 
 Submit both the source code and the compiled code
