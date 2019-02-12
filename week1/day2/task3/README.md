@@ -11,9 +11,9 @@ example:
 $ java program 5
 
 \#\#\#\#\#  
-\#\_\_\_\_\#  
-\#\_\_\_\_\#  
-\#\_\_\_\_\#  
+\#\_\_\_\#  
+\#\_\_\_\#  
+\#\_\_\_\#  
 \#\#\#\#\#  
 
 Submit both the source code and the compiled code
