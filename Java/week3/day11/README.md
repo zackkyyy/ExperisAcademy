@@ -1,0 +1,23 @@
+Task 17
+
+For the week you will be building a Java app for storing (and accessing) contact information in a Database.
+You will need to design and implement tables to store this information: 
+
+- First Name
+- Last Name
+- Contact Number (multiple possible - work/home/mobile/etc)
+- E-mail Address (multiple possible - work/personal/etc)
+- Home Address (may be shared by people)
+- Date of Birth
+- Family/Blood Relationship (Only close ones - mother/father/brother/sister)
+
+
+Divide yourselves into groups of three or four
+Later in the week we will cover the basics of WebApps
+
+For now design the database and transactions
+Some design considerations:
+
+- The app must perform CRUD operations for all tables
+- The app must allow me to search by name/surname/telephone number.
+- For a given contact it must show the related contacts and how they are related.
