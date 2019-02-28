@@ -21,3 +21,15 @@ Some design considerations:
 - The app must perform CRUD operations for all tables
 - The app must allow me to search by name/surname/telephone number.
 - For a given contact it must show the related contacts and how they are related.
+
+ADDITIONAL SPECIFICATIONS:
+- The app must have a public API that exposes the values as JSON
+- The app must have a web interface for browsing existing contacts
+- There must be methods for adding data (Web forms are not a requirement)
+- Specifically, you must create Post Mappings but they only need to be usable via Postman/Console
+- OPTIONAL: Web based forms for editing/adding contacts
+- OPTIONAL: Hosted on Heroku (Hand in both source and Heroku Link in README.md file)
+
+HINT: See Thursdays optional task
+
+THERE WILL NOT BE ANY FURTHER FEATURE CREEP
