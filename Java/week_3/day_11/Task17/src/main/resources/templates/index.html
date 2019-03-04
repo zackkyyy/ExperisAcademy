@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 17</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <style>
+        .leftAlign {
+            padding: 10px;
+            position: relative;
+        }
+        .leftAlignSearch{
+            width: 400px;
+            padding: 1px;
+            display:inline-block;
+        }
+        .leftAlignButton{
+            display:inline-block;
+            position: relative;
+            top: -3px;
+        }
+        .section1{
+            padding: 20px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="">
+        <font color="white">Contact database</font></a>
+    <div class="leftAlign">
+        <div class="leftAlignSearch">
+            <input class="form-control mr-sm-2" id="inputNew" type="search" required="required"
+                   placeholder="Search name or phonenumber" aria-label="Search">
+        </div>
+        <div class="leftAlignButton">
+            <button class="btn btn-secondary" onclick="searchNew()">Search</button>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="section1">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <a href="/person/all" target="_self">View all contacts</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/swagger-ui.html" target="_self">Api documentation</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/surprise">Make my day</a>
+            </li>
+            <li class="list-group-item">
+                <p>
+                    Adding persons can be done in Postman at /person/add
+                </p>
+                <p>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="collapse"
+                            data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <font color="white">Expand to see how</font>
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <p>E.g<br>
+                            {<br>
+                            "firstName": "Craig",<br>
+                            "lastName": "Marais",<br>
+                            "birthday": "28.02.2019"<br>
+                            }<br>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        Webform Add Person
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="formPersonFirstname">Firstname</label>
+                            <input type="email" class="form-control" id="formPersonFirstname"
+                                   placeholder="'Craig'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formPersonLastname">Lastname</label>
+                            <input type="email" class="form-control" id="formPersonLastname"
+                                   placeholder="'Marais'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formPersonBirth">Birthday</label>
+                            <input type="email" class="form-control" id="formPersonBirth"
+                                   placeholder="'01/12/1994'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmailPersonal">Email Personal</label>
+                            <input type="email" class="form-control" id="formEmailPersonal"
+                                   placeholder="'Craig@noroff.no'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmailWork">Email Work</label>
+                            <input type="email" class="form-control" id="formEmailWork"
+                                   placeholder="'CraigWork@noroff.no'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formContactHome">Contact Home</label>
+                            <input type="email" class="form-control" id="formContactHome"
+                                   placeholder="'90000001'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formContactMobile">Contact Mobile</label>
+                            <input type="email" class="form-control" id="formContactMobile"
+                                   placeholder="'90000001'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formContactWork">Contact Work</label>
+                            <input type="email" class="form-control" id="formContactWork"
+                                   placeholder="'90000001'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formAddressStreet">Streetaddress</label>
+                            <input type="email" class="form-control" id="formAddressStreet"
+                                   placeholder="'bakkegata 21A'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formAddressPostCode">Post Code</label>
+                            <input type="email" class="form-control" id="formAddressPostCode"
+                                   placeholder="'0121'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formAddressMailing">Post Number</label>
+                            <input type="email" class="form-control" id="formAddressMailing"
+                                   placeholder="'Oslo'">
+                        </div>
+                        <div class="form-group">
+                            <label for="formAddressCountry">Mailingaddress</label>
+                            <input type="email" class="form-control" id="formAddressCountry"
+                                   placeholder="'Norge'">
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="personSubmit()">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        function searchNew(){
+            var data = document.getElementById("inputNew").value
+            window.location.href = '/person/search/' + data;
+        }
+        function personSubmit(){
+            alert("functionality not added");
+        }
+
+
+</script>
+</body>
+</html>
