@@ -1,0 +1,28 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="postgresdb" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>no.noroff.Task21.model.User</class>
+        <class>no.noroff.Task21.model.Class</class>
+        <class>no.noroff.Task21.model.Character</class>
+
+        <properties>
+            <property
+                    name="javax.persistence.jdbc.url"
+                    value="jdbc:postgresql://ec2-176-34-233-118.eu-west-1.compute.amazonaws.com:5432/d967t7qlt642n8?user=yuircmiiwnnkrk&amp;password=42ad7ad0da4b7cd32d4a42138d25c35e3ab2ee9e958a4a258ee54597630a5f7b" />
+            <property name="javax.persistence.jdbc.user" value="yuircmiiwnnkrk" />
+            <property name="javax.persistence.jdbc.password" value="42ad7ad0da4b7cd32d4a42138d25c35e3ab2ee9e958a4a258ee54597630a5f7b" />
+            <property name="spring.datasource.maxActive" value="15" />
+            <property name="spring.datasource.removeAbandoned" value="true" />
+            <property name="hibernate.connection.charSet" value="UTF-8"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect" />
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" /> <!-- create / create-drop / update -->
+            <property name="hibernate.show_sql" value="false" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+        </properties>
+    </persistence-unit>
+</persistence>
